@@ -38,9 +38,6 @@ function activate(context) {
                 if (foundContent !== null) {
                     return new vscode.Hover(foundContent);
                 } 
-                else {
-                    return new vscode.Hover("Handle not Found");
-                }
             }
         }
     });
