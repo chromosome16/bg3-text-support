@@ -1,0 +1,5241 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BG3",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+			"keywords": {
+				"patterns": [
+					{
+						"name": "markup.underline.link",
+						"match": "\\b(h[0-9a-zA-Z]{36})+\\b"
+					},
+					{
+						"name": "keyword.uuid",
+						"match": "\\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bcontext\\b|\\bIF\\b|\\band\\b|\\bnot|\\bor\\b"
+					},
+					{
+					"name": "keyword",
+					"match": "^(?!using\\b)\\b\\w+\\s+(\")([^\"]+)(\")\\s?",
+					"captures": {
+						"1": {
+						"name": "keyword.operator"
+						},
+						"2": {
+						"name": "support.type.property-name"
+						},
+						"3": {
+						"name": "keyword.operator"
+						}
+					}
+					},
+					{
+						"name": "strings.quoted.bg3",
+						"match": "'([^']+)'",
+						"captures": {
+						"1": { "name": "string.quoted.single" }
+						}
+					},
+					{
+						"name": "entity.name.function",
+						"match": "\\b\\w+(?=\\()"
+					},
+					{
+						"name": "keyword.object",
+						"match": "\\bobject\\b"
+					},
+					{
+						"name": "keyword.category",
+						"match": "\\bcategory\\b"
+					},
+					{
+						"name": "keyword.modifier",
+						"match": "\\bmodifier\\b"
+					},
+					{
+						"name": "keyword.valuelist",
+						"match": "\\bvaluelist\\b"
+					},
+					{
+						"name": "keyword.value",
+						"match": "\\bvalue\\b"
+					},
+					{
+						"name": "keyword.add",
+						"match": "\\badd\\b"
+					},
+					{
+						"name": "keyword.type",
+						"match": "\\btype\\b"
+					},
+					{
+						"name": "keyword.initialweaponset",
+						"match": "\\binitialweaponset\\b"
+					},
+					{
+						"name": "keyword.equipmentgroup",
+						"match": "\\bequipmentgroup\\b"
+					},{
+						"name": "keyword.equipment",
+						"match": "\\bequipment\\b"
+					},
+					{
+						"name": "keyword.data",
+						"match": "\\bdata\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bentry\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bequipment\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bsubtable\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bnew\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\busing\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\btreasuretable\\b"
+					},
+					{
+						"name": "keyword.true",
+						"match": "\\btrue\\b"
+					},
+					{
+						"name": "keyword.false",
+						"match": "\\bfalse\\b"
+					},
+					{
+						"name": "keyword.status",
+						"match": "\\b[A-Z]{2,}[A-Z_0-9]*\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWhite\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDarkGray\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGray\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightGray\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bObserver\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bYesNoDecision\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDarkBlue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightBlue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGreen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoisonGreen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAdditiveFinal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bYellow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOwner\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOrange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPink\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPurple\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBrown\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGold\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNormal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStoryItem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlackrock\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEarth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAir\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWater\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSource\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDecay\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPolymorph\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanger\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRogue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSummoner\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVoid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarrior\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpecial\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHealing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharm\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNo\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bYes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAcid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChasm\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDoT\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bElectrocution\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExplode\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFalling\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIncinerate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKnockedDown\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLifetime\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNecrotic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPhysical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPsychic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRadiant\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCinematicDeath\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCold\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisintegrate\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bDefault\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLying\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSitting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMAX\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSneaking\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTombstone\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAbjuration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConjuration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDivination\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEnchantment\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEvocation\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIllusion\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNecromancy\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTransmutation\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bBare\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpider\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLeather\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMetal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHooves\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClawed\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bAuto\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEquipment\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConsumable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIngredient\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBooksAndKeys\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMisc\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHidden\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlwaysBackstab\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnbreakable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanBackstab\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlwaysHighGround\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWater\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWaterElectrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWaterFrozen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlood\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBloodElectrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBloodFrozen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOil\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLava\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrease\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWyvernPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDeepwater\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVines\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAcid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTrialFire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlackpowder\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShadowCursedVines\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlienoil\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlcohol\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvisibleWeb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBloodSilver\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChasm\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHellfire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCausticBrine\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBloodExploding\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAsh\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpikeGrowth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHolyFire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlackTentacles\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOvergrowth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPurpleWormPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSerpentVenom\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvisibleGithAcid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBladeBarrier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSewer\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWaterCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWaterCloudElectrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoisonCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExplosionCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShockwaveCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCloudkillCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMaliceCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBloodCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStinkingCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDarknessCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEquipmentSlot\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSurfaceDarknessCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeOffHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bnil\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFogCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGithPheromoneGasCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeMainHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatusId\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSporeWhiteCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSporeGreenCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSporeBlackCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDrowPoisonCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIceCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionHealingCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionHealingGreaterCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionHealingSuperiorCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionHealingSupremeCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionInvisibilityCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionSpeedCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionVitalityCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionAntitoxinCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistanceAcidCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistanceColdCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistanceFireCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistanceForceCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistanceLightningCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotionResistancePoisonCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSporePinkCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlackPowderDetonationCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVoidCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCrawlerMucusCloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCloudkill6Cloud\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSentinel\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bLevel\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChallengeRating\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bSimpleMeleeWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedMainHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellSchool\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bObserverPosition\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedOffHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSimpleRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMartialMeleeWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMartialRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNature\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSleight of Hand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAnimal Handling\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStrength\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDexterity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConstitution\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIntelligence\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWisdom\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharisma\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bDirectHit\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeWeaponAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedWeaponAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeSpellAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedSpellAttack\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bBonusActionPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMovement\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bActionPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellSlotsGroup\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReactionActionPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellSlot\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChannelDivinity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHit\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSuperiorityDie\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKiPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSorceryPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarlockSpellSlot\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBardicInspiration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArcaneRecoveryPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNaturalRecoveryPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildShape\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSlashing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPiercing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBludgeoning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAcid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThunder\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNecrotic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFire\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCold\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPsychic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRadiant\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForce\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOverlay\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFadingOverlay\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReplacement\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConsume\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTransform\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPoison\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDye\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bResurrect\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRain\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStorm\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStaffWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDaggerWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShieldWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRifleWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrowWeapon\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bRegular\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBonus\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bFixedValue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPercentage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bQualifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShield\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetDependent\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDamagePercentage\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnite\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDouse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bElectrify\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDeelectrify\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFreeze\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelt\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVaporize\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCondense\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDestroyWater\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClear\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDaylight\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bBaseLevelDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAverageLevelDamge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMonsterWeaponDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceMaximumVitality\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceMaximumPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceMaximumMagicArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceCurrentVitality\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceCurrentPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceCurrentMagicArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSourceShieldPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetMaximumVitality\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetMaximumPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetMaximumMagicArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetCurrentVitality\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetCurrentPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetCurrentMagicArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetCurrentMagicArmor\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrenade\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bRandom\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNormal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEdge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEdgeCenter\\b"
+					},
+				{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSpellCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnAttacked\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnApply\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnRemove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnApplyAndTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEquip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnUnequip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnHeal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnObscurityChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSightRelationsChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSurfaceEnter\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusApplied\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusRemoved\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnMove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCombatEnded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnRemovePerformanceRequest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnLockpickingSucceeded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSourceDeath\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSourceStatusApplied\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnFactionChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEntityPickUp\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEntityDrop\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEntityDrag\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bHelmet\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBreast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCloak\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee Main Weapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee Offhand Weapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged Main Weapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged Offhand Weapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnderwear\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBoots\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGloves\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAmulet\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRing2\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWings\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHorns\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOverhead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMusicalInstrument\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVanityBody\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVanityBoots\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSlippingImmunity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTorch\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnbreakable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnrepairable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnstorable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrounded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFloating\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInventoryBound\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreClouds\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLootableWhenEquipped\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPickpocketableWhenEquipped\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoseDurabilityOnCharacterHit\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThrownImmunity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvisibilityImmunity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvulnerableAndInteractive\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBackstab\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBackstabImmunity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEnableObscurityEvents\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bObscurityWithoutSneaking\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFloatingWhileMoving\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceMainhandAlternativeEquipBones\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUseMusicalInstrumentForCasting\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCloth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPadded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLeather\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStuddedLeather\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHide\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChainShirt\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bScaleMail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBreastPlate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHalfPlate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRingMail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChainMail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSplint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPlate\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarriorLore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangerLore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRogueLore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSingleHanded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTwoHanded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvestigation\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShield\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerception\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPhysicalArmorMastery\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArcana\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInsight\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFireSpecialist\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWaterSpecialist\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAirSpecialist\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSurvival\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReligion\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAnimalHandling\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPolymorph\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRepair\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStealth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSleightOfHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThievery\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHistory\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCrafting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerformance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDeception\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIntimidation\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReason\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPersuasion\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLeadership\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLuck\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDualWielding\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicArmorMastery\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMedicine\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerseverance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRunecrafting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBrewmaster\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAthletics\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAcrobatics\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSulfurology\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bObject\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCategory\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bProperty\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDouse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCreateSurface\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetCreateSurface\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCreateConeSurface\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPickup\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmadness\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceSet\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStroll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRun\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSwapPlaces\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEqualize\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPreferredCastingAbility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUndead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConstruct\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLiving\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeMainWeaponRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOffhandMeleeWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlways\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeOffhandWeaponRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNonmagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNonlethal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bActionType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDoor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenClose\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTeleport\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShoveDistance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOriginToEntity\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFriendly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHostile\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAttackTarget\\b"
+					}
+					,
+				
+					{
+						"name": "support.class",
+						"match": "\\bItem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharm\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBoost\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSkill\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCrystal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFood\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bStack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOverwrite\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDeactivate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVariable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAdditive\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVitality\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPhysicalArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAllArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSource\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDistance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetSurfaceType\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLight\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAmmunition\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFinesse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHeavy\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoading\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReach\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNet\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThrown\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTwohanded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVersatile\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDippable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTorch\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNoDualWield\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNeedDualWieldingBoost\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNotSheathable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnstowable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAddToHotbar\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bCanNotUse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreSelf\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreDebuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreBuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatusIsSecondary\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreControl\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanNotTargetFrozen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrantsResources\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUseAsSupportingActionOnly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUseAsSeekActionOnly\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bStartTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEndTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStartRound\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEndRound\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bTiny\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSmall\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMedium\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLarge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHuge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGargantuan\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bResistant\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImmune\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVulnerable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bResistantToMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImmuneToMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVulnerableToMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bResistantToNonMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImmuneToNonMagical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVulnerableToNonMagical\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHealing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDebuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUtility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bControl\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSummon\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHasVerbalComponent\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHasSomaticComponent\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsJump\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHasHighGroundRangeExtension\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsConcentration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAddFallDamageOnLand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShout\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bProjectile\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellData\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatusData\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPassiveData\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInterruptData\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCriticalHitTypeData\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRawAbility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAbility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharismaModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAttackType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCheckedAbility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCheckedSkill\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRageDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellFlags\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bProficiencyBonus\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpell\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bReplace\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVerbal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAdditiveBase\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellPowerLevel\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMultiplicative\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOverride\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAdd\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMetamagic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAddChildren\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAllSavingThrows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAttackType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeOffHandWeaponAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOffhandMeleeWeaponDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeWeaponDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangedOffHandWeaponAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOffhandRangedWeaponDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSize\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatsFunctorContext\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUntilRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUntilLongRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSingular\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConcentrationIgnoresResting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInventorySelection\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsSpell\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCombatLogSetSingleLineRoll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsEnemySpell\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCannotTargetCharacter\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCannotTargetItems\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCannotTargetTerrain\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreVisionBlock\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStealth\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAddWeaponRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreSilence\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImmediateCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangeIgnoreSourceBounds\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangeIgnoreTargetBounds\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangeIgnoreVerticalThreshold\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNoSurprise\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsHarmful\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsTrap\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsDefaultWeaponAction\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCallAlliesSpell\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTargetClosestEqualGroundSurface\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCannotRotate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNoCameraMove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanDualWield\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsLinkedSpellContainer\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvisible\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAllowMoveAndCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUNUSED_D\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildshape\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUNUSED_E\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnavailableInDialogs\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTrajectoryRules\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPickupEntityAndMove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTemporary\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRangeIgnoreBlindness\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAbortOnSpellRollFail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAbortOnSecondarySpellRollFail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanAreaDamageEvade\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDontAbortPerforming\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNoCooldownOnMiss\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNoAOEDamageOnLand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsSwarmAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisplayInItemTooltip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHideInItemTooltip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisableBlood\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnorePreviouslyPickedEntities\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreAoO\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExecuteOnce\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsHidden\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsToggled\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bToggledDefaultOn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bToggledDefaultAddToHotbar\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerShortRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerLongRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMetaMagic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHighlighted\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTemporary\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerShortRestPerItem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerLongRestPerItem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bToggleForParty\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceShowInCC\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTarget\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAOE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEquip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGround\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnLeaveAttackRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEntityAttackedWithinMeleeRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEntityAttackingWithinMeleeRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnProficiencyChange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusApply\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusApplied\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusRemove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnMovedDistance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAiOnly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAiIgnore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnAttacked\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnHeal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnStatusRemoved\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnObscurityChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnShortRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnDamaged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnHealed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnAbilityCheck\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCastResolved\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnLongRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCreate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnPush\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnPushed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnInventoryChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEnterAttackRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnProjectileExploded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCombatEnded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnActionResourcesChanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSurfaceEnter\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnLockpickingSucceeded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnInterruptUsed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnDamagePrevented\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnDamagedPrevented\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bSuffocating\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeakened\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDazed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlinded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFrightened\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFeared\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMental\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSneaking\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSitting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDance\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSnared\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerforming\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShouting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLaughing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSleeping\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKO_Fallen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKO\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDowned\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerTurnNoRealtime\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerShortRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerRestPerItem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOncePerShortRestPerItem\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerforming\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInitiateCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBringIntoCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceOverhead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsChanneled\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsInvulnerable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExcludeFromPortraitRendering\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoseControl\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceNeutralInteractions\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPeaceOnly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAllowLeaveCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisableImmunityOverhead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisableInteractions\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bToggle\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoreResting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnoredByImmobilized\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlind\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMultiplyEffectsByDuration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTickingWithSource\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisableOverhead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisableCombatlog\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisablePortraitIndicator\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExecuteFunctorsOnOwner\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIsInvulnerableVisible\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bApplyToDead\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGiveExp\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBurning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNonExtendable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFreezeDuration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnavailableInActiveRoll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOverheadOnTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnsheathInstrument\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIndicateDarkness\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoseControlFriendly\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFeared\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKO\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKO_Fallen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSleeping\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBlinded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSnared\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDazed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDowned\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeakened\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClimbing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMental\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSneaking\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShouting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSitting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLongRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLaughing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSwapped\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrappled\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrappling\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerforming1\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerforming2\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerforming3\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPerformingFail\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDancing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSuffocating\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLaughing_Hideous\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFrightened\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPetrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChanneling\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSystem\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrow_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBow_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBow_Ground\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWand_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWand_Ground\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBackStab\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBackStab_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCast_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCombine\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCombine_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCombine_Invalid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCross\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIdentify\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIdentify_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemMove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemMove_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemUse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemUse_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemPickup\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bItemPickup_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLock\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLock_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee_Ground\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenContainer\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenContainer_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenContainer_New\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenDoor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOpenDoor_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPickPocket\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPickPocket_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRepair\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRepair_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShovel\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShovel_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTalk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTalk_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWalk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWalk_Warning\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCameraRotation\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bListen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bListen_Warning\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDash\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDisengage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDistract\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHelp\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHide\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bJump\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKnockout\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShove\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDismiss\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImprovisedWeapon\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCode\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDialog\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGender\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOrigin\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bProfession\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRace\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStory\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVoice\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bInvalid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLocal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUser\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bParty\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharacter\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGlobal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDialog\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDipping\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAssisting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThrowing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImprovisedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRestrain\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShoving\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bJumping\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTelekinesis\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNONE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoading\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLoadingProgress\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellPrepare\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLevelUp\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bQuestCompleted\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDialog\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpotted\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDeath\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCritical\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEnemyKilled\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSaveSuccess\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSaveFailed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStealthMode\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCrafting\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOFF\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bKnockedDown\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStunned\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPetrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFrozen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTerrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPossessed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCharmed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDrunk\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bany\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\blow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bhigh\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCommon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGrenade\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bArrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bScroll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPotion\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bThrowable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConsumable\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bSameNonNullVictimOrCommonEvidence\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSameVictimAndCommonEvidence\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSameVictim\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNever\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bInvestigateInterrogate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvestigateOnly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvestigateSceneReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceInvestigateInterrogate\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceSceneReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceInvestigateSceneReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvestigateSuspectReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceInvestigateSuspectReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInvestigateCriminalReact\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bForceInvestigateCriminalReact\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBattleaxes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClubs\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDaggers\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDarts\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFlails\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGlaives\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGreataxes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGreatclubs\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGreatswords\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHalberds\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHandCrossbows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHandaxes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHeavyArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHeavyCrossbows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bJavelins\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightCrossbows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLightHammers\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLongbows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLongswords\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMaces\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMartialWeapons\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMauls\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMediumArmor\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMorningstars\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPikes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bQuarterstaffs\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRapiers\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bScimitars\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShields\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShortbows\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShortswords\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSickles\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSimpleWeapons\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSlings\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpears\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTridents\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarhammers\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarpicks\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMusicalInstrument\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bSG_None\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Condition\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Blinded\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Charmed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Cursed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Disease\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Exhausted\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Frightened\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Incapacitated\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Invisible\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Poisoned\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Prone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Restrained\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Stunned\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Unconscious\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Surface\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Polymorph\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Paralyzed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Light\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Disguise\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Possessed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Petrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Polymorph_BeastShape\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Polymorph_BeastShape_NPC\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Poisoned_Story_Removable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Poisoned_Story_Nonremovable\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Charmed_Subtle\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Helpable_Condition\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Rage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Taunted\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Approaching\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Dominated\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Fleeing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Confused\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Mad\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_DetectThoughts\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_DifficultTerrain\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_ScriptedPeaceBehaviour\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_DropForNonMutingDialog\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_HexbladeCurse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_WeaponCoating\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Doppelganger\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_CanBePickedUp\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Drunk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_Sleeping\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSG_RemoveOnRespec\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNo\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bYes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bYesIgnoreStats\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bAlly\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNeutral\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEnemy\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPersistent Neutral\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNONE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bATTACK\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDEATH\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDODGE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPAIN\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bANTICIPATION\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFALL\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSHOUT\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSPAWN\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bALERT\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bANGRY\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAWAKE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBORED\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVICTORY\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bREBORN\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRELAXED\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSNORE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEXHAUSTED\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEFFORTS\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bINITIATIVE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWEAK\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLAUGHTER\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRECOVER\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBUFF\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLE1\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLE2\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLE3\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLECOMBAT1\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLECOMBAT2\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIDLECOMBAT3\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGASP\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLAUGHTERMANIACAL\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMAX\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAddSourceHeight\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bJump\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPounce\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFlight\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bDefault\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPhysicalDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicalDamage_Electric\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicalDamage_External\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicalDamage_Internal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicalDamage_Psychic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMagicalNonDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAnimationSetOverride\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAggressive\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPeaceful\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAction\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bCommon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUncommon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRare\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bVeryRare\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLegendary\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBase\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAdditive\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bExcl_CanTalk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIncl_Summon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIncl_Wildshape\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIncl_OtherCannotTalk\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bSC_None\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_TargetSingle\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_TargetMultiselect\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_TargetAoE\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_IntentDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_IntentHealing\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_IntentBuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_IntentDebuff\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_IntentUtility\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_Jump\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_Dash\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSC_DetectThoughts\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bIntent\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClass\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bClass_Intent\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIgnore\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAlwaysShow\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bPositive\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNegative\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bGlobalDisabled\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bScript\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDialog\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCombat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFTB\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNotEnoughResources\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDownedOrDead\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBagpipes\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDrum\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDulcimer\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFlute\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLute\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLyre\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHorn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShawm\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bViolin\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMusicbox\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSaxophone\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d4\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d6\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d8\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d10\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d12\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d20\\b(?!-)"
+					},
+					{
+						"name": "constant.numeric",
+						"match": "(?<!-)-?\\b[0-9]{1,4}d100\\b(?!-)"
+					},
+					{
+						"name": "capture-numbers",
+						"match": "(-?\\b\\d+(?:\\.\\d+)?%?\\b)",
+						"captures": {
+						"0": { "name": "constant.numeric" }
+						}
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainRangedWeaponDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFlat\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bObscuredState\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainRangedWeaponDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainMeleeWeaponDamageType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDamageFlags\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSkillCheck\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShout \\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTarget \\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bProjectile \\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInterrupt\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPassive\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSavingThrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNonLethal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMaxHP\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNormal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bChannelOath\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeaponActionPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUntilShortRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSmall\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBig\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bSomatic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDontChange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInstrument\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSheathed\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeaponSet\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIngredientsToExtract\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExtractToSolution\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnSpellCast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnPostRoll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnCastHit\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnEnterAttackRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnLeaveAttackRange\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOnPreDamage\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSelf\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNearby\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInstrument\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRanged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSheathed\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bCaster\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTarget\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAsk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEnabled\\b"
+					},
+				
+					{
+						"name": "support.class",
+						"match": "\\bNone\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanAffectInvisibleItems\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAIIgnoreOnSelf\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bShouldCheckLOS\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStrengthModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWisdomModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bIntelligenceModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDexterityModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConstitutionModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAllAbilities\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTidesOfChaos\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildMagic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildMagicTurn\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnarmedMeleeAbilityModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDuration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMiss\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bAttackRoll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatusEvent\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bUnarmedDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMeleeUnarmedAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMartialArtsUnarmedDamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOffhandRangedWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCastOffhand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOffHand\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bEmpty\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildShapeDamageLow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildShapeDamageMedium\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildShapeDamageHigh\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bImmobile\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bDruid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCleric\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWizard\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSorceror\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPaladin\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBarbarian\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bBard\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFighter\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMonk\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWarlock\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainMeleeWeapon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSneakAttack_Charge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bStatusRemoveCause\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFailure\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSuccess\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bTimeOut\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\branged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\branged_smart\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\branged_dumb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_smart\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_dumb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCondition\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmage_smart\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmage_dumb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\brogue\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\brogue_smart\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\brogue_dumb\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bOriginToTarget\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bExternal\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bSpellCastingAbilityModifier\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWildMagicBarbarian\\b"
+					}
+					
+					
+				]
+		}	
+	},
+	"scopeName": "source.txt"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "bg3-text-support",
+  "displayName": "BG3 Text Support",
+  "publisher": "chromosome16",
+  "description": "Language support for BG3 text files.",
+  "repository": "https://github.com/chromosome16/bg3-text-support",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [{
+      "id": "bg3",
+      "aliases": ["BG3", "bg3"],
+      "extensions": [".txt"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "bg3",
+      "scopeName": "source.txt",
+      "path": "./syntaxes/bg3.tmLanguage.json"
+    }],
+    "snippets": [
+      {
+        "language": "bg3",
+        "path": "./snippets/bg3snippets.json"
+      }
+    ],
+    "commands": [{
+      "command": "bg3.rebuildHandles",
+      "title": "BG3: Rebuild Handle References"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.82.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "eslint": "^8.47.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.1.6",
+    "@vscode/test-electron": "^2.3.4"
+  },
+  "dependencies": {
+    "sax": "^1.2.4"
+  },
+  "files": [
+      "resources/english.xml"
+  ]
+}
