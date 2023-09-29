@@ -4,30 +4,21 @@ const path = require('path');
 
 const regex = /(h[0-9a-zA-Z]{36})+/;
 const contentData = new Map();
-    
+
+const { provideDocumentFormattingEdits } = require('./src/document_formatter');
+
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
     const xmlFilePath = path.join(context.extensionPath, 'resources', 'english.xml');   
     const workspaceFolders = vscode.workspace.workspaceFolders;
-    let disposable = vscode.commands.registerCommand('bg3.rebuildHandles', function () {
-		vscode.window.showInformationMessage('Rebuilding handle references...');
+    setupLanguage
+    let disposable = vscode.commands.registerCommand('bg3.buildHandles', function () {
+		vscode.window.showInformationMessage('Building handle references...');
         rebuildHandleReferences(workspaceFolders, xmlFilePath);
 	});
     context.subscriptions.push(disposable);
-    if (workspaceFolders) {
-        for (const folder of workspaceFolders) {
-            const englishFolderPath = path.join(folder.uri.fsPath, 'Localization', 'English');
-            if (fs.existsSync(englishFolderPath)) {
-                const xmlFiles = findXmlFilesInFolder(englishFolderPath);
-                for (const xmlFile of xmlFiles) {
-                    lookupHandlesInXmlSync(xmlFile);
-                }
-            }
-        }
-    }
-    lookupHandlesInXmlSync(xmlFilePath);
 
 	vscode.languages.registerHoverProvider(['bg3','xml'], {
         provideHover(document, position, token) {
@@ -41,7 +32,18 @@ function activate(context) {
             }
         }
     });
+    vscode.languages.registerDocumentFormattingEditProvider('bg3', {
+        provideDocumentFormattingEdits(document) {
+            return provideDocumentFormattingEdits(document);
+        },
+    });
 }
+function setupLanguage() {
+    const config = vscode.workspace.getConfiguration();
+    const customLanguageId = "bg3"; // Replace with your custom language identifier
+    config.update("files.associations", { "*.txt": customLanguageId }, vscode.ConfigurationTarget.Workspace);
+}
+
 function rebuildHandleReferences(workspaceFolders, xmlFilePath) {
     contentData.clear(); 
     if (workspaceFolders) {

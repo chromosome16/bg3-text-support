@@ -8882,6 +8882,13 @@
     ],
     "description": ""
   },
+  "MainWeaponDamageType": {
+    "prefix": "MainWeaponDamageType",
+    "body": [
+      "MainWeaponDamageType"
+    ],
+    "description": ""
+  },
   "Shortswords": {
     "prefix": "Shortswords",
     "body": [

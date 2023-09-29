@@ -7,8 +7,12 @@ Didnt realise there were a few up on github already for vscode, and in the exten
 - Syntax highlighting
 - Snippets
 - Handles shown on hover (both txt and xml, but xml requires you first open a txt to activate the extension, to be addressed)
-# Commands
-ctrl+shift+p BG3: Rebuild Handle References
-the handle references are generated at activation, so if you add any use this to rebuild 
+- Facufierro's document formatter (Thanks!)
 
-this section is WIP
+# Commands
+Format Document: Shift+Alt+F  
+
+Build Handle References: Ctrl+Shift+P (Command Pallete) - search 'BG3: Build Handle References'
+
+The handle references take up a few hundred MB of memory, so to avoid that when working with other text files in vscode you will need to run this command to generate the handles on hover, or if you add any new ones. 
+

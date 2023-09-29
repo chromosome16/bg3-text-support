@@ -12,6 +12,11 @@
 	"repository": {
 			"keywords": {
 				"patterns": [
+
+					{
+						"name": "comment.line",
+						"match": "\/\/.*$"
+					},
 					{
 						"name": "markup.underline.link",
 						"match": "\\b(h[0-9a-zA-Z]{36})+\\b"
@@ -26,7 +31,7 @@
 					},
 					{
 					"name": "keyword",
-					"match": "^(?!using\\b)\\b\\w+\\s+(\")([^\"]+)(\")\\s?",
+					"match": "(?!(?:using|entry|treasuretable|subtable|category|equipment|initialweaponset)\\b)\\b\\w+\\s+(\")([^\"]+)(\")\\s?",
 					"captures": {
 						"1": {
 						"name": "keyword.operator"
@@ -71,10 +76,6 @@
 						"match": "\\bvalue\\b"
 					},
 					{
-						"name": "keyword.add",
-						"match": "\\badd\\b"
-					},
-					{
 						"name": "keyword.type",
 						"match": "\\btype\\b"
 					},
@@ -86,8 +87,15 @@
 						"name": "keyword.equipmentgroup",
 						"match": "\\bequipmentgroup\\b"
 					},{
-						"name": "keyword.equipment",
+						"name": "keyword.control",
 						"match": "\\bequipment\\b"
+					},{
+						"name": "keyword.control",
+						"match": "\\badd equipment\\b"
+					},
+					{
+						"name": "keyword.add",
+						"match": "\\badd\\b"
 					},
 					{
 						"name": "keyword.data",
@@ -128,6 +136,10 @@
 					{
 						"name": "keyword.status",
 						"match": "\\b[A-Z]{2,}[A-Z_0-9]*\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCanMerge\\b"
 					},
 					{
 						"name": "support.class",
@@ -3793,6 +3805,10 @@
 					{
 						"name": "support.class",
 						"match": "\\blow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bMainWeaponDamageType\\b"
 					},
 					{
 						"name": "support.class",

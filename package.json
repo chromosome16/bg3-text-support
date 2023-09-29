@@ -4,7 +4,7 @@
   "publisher": "chromosome16",
   "description": "Language support for BG3 text files.",
   "repository": "https://github.com/chromosome16/bg3-text-support",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.82.0"
   },
@@ -32,8 +32,8 @@
       }
     ],
     "commands": [{
-      "command": "bg3.rebuildHandles",
-      "title": "BG3: Rebuild Handle References"
+      "command": "bg3.buildHandles",
+      "title": "BG3: Build Handle References"
     }]
   },
   "scripts": {
