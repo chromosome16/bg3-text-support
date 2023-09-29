@@ -13,6 +13,13 @@
     ],
     "description": ""
   },
+  "HybridCasterWeaponActionDC()": {
+    "prefix": "HybridCasterWeaponActionDC()",
+    "body": [
+      "HybridCasterWeaponActionDC()"
+    ],
+    "description": ""
+  },
   "EntityThrowDamage()": {
     "prefix": "EntityThrowDamage()",
     "body": [
