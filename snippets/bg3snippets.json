@@ -3142,6 +3142,20 @@
     ],
     "description": ""
   },
+  "Permanent": {
+    "prefix": "Permanent",
+    "body": [
+      "Permanent"
+    ],
+    "description": ""
+  },
+  "Teleportation": {
+    "prefix": "Teleportation",
+    "body": [
+      "Teleportation"
+    ],
+    "description": ""
+  },
   "YesNoDecision": {
     "prefix": "YesNoDecision",
     "body": [
@@ -7097,6 +7111,13 @@
     ],
     "description": ""
   },
+  "ResistanceType": {
+    "prefix": "ResistanceType",
+    "body": [
+      "ResistanceType"
+    ],
+    "description": ""
+  },
   "IgnoreAoO": {
     "prefix": "IgnoreAoO",
     "body": [
@@ -7944,6 +7965,62 @@
     ],
     "description": ""
   },
+  "HitDice": {
+    "prefix": "HitDice",
+    "body": [
+      "HitDice"
+    ],
+    "description": ""
+  },
+  "RitualPoint": {
+    "prefix": "RitualPoint",
+    "body": [
+      "RitualPoint"
+    ],
+    "description": ""
+  },
+  "LayOnHandsCharge": {
+    "prefix": "LayOnHandsCharge",
+    "body": [
+      "LayOnHandsCharge"
+    ],
+    "description": ""
+  },
+  "Interrupt_HellishRebukeTiefling_Charge": {
+    "prefix": "Interrupt_HellishRebukeTiefling_Charge",
+    "body": [
+      "Interrupt_HellishRebukeTiefling_Charge"
+    ],
+    "description": ""
+  },
+  "Interrupt_HellishRebukeWarlockMI_Charge": {
+    "prefix": "Interrupt_HellishRebukeWarlockMI_Charge",
+    "body": [
+      "Interrupt_HellishRebukeWarlockMI_Charge"
+    ],
+    "description": ""
+  },
+  "Cause": {
+    "prefix": "Cause",
+    "body": [
+      "Cause"
+    ],
+    "description": ""
+  },
+  "LuckPoint": {
+    "prefix": "LuckPoint",
+    "body": [
+      "LuckPoint"
+    ],
+    "description": ""
+  },
+  "FungalInfestationCharge": {
+    "prefix": "FungalInfestationCharge",
+    "body": [
+      "FungalInfestationCharge"
+    ],
+    "description": ""
+  },
   "Combine_Invalid": {
     "prefix": "Combine_Invalid",
     "body": [
@@ -8406,6 +8483,351 @@
     ],
     "description": ""
   },
+  "MostPowerful": {
+    "prefix": "MostPowerful",
+    "body": [
+      "MostPowerful"
+    ],
+    "description": ""
+  },
+  "ShadowSpellSlot": {
+    "prefix": "ShadowSpellSlot",
+    "body": [
+      "ShadowSpellSlot"
+    ],
+    "description": ""
+  },
+  "Concentration": {
+    "prefix": "Concentration",
+    "body": [
+      "Concentration"
+    ],
+    "description": ""
+  },
+  "NonlethalCapped": {
+    "prefix": "NonlethalCapped",
+    "body": [
+      "NonlethalCapped"
+    ],
+    "description": ""
+  },
+  "ConditionRollType": {
+    "prefix": "ConditionRollType",
+    "body": [
+      "ConditionRollType"
+    ],
+    "description": ""
+  },
+  
+    "act1_GOB_gut": {
+      "prefix": "act1_GOB_gut",
+      "body": [
+        "act1_GOB_gut"
+      ],
+      "description": ""
+    },
+    "act1_wyll": {
+      "prefix": "act1_wyll",
+      "body": [
+        "act1_wyll"
+      ],
+      "description": ""
+    },
+    "act2_TWN_nurse": {
+      "prefix": "act2_TWN_nurse",
+      "body": [
+        "act2_TWN_nurse"
+      ],
+      "description": ""
+    },
+    "base": {
+      "prefix": "base",
+      "body": [
+        "base"
+      ],
+      "description": ""
+    },
+    "beast": {
+      "prefix": "beast",
+      "body": [
+        "beast"
+      ],
+      "description": ""
+    },
+    "beast_ranged": {
+      "prefix": "beast_ranged",
+      "body": [
+        "beast_ranged"
+      ],
+      "description": ""
+    },
+    "beholder": {
+      "prefix": "beholder",
+      "body": [
+        "beholder"
+      ],
+      "description": ""
+    },
+    "bulette": {
+      "prefix": "bulette",
+      "body": [
+        "bulette"
+      ],
+      "description": ""
+    },
+    "cinematic_melee": {
+      "prefix": "cinematic_melee",
+      "body": [
+        "cinematic_melee"
+      ],
+      "description": ""
+    },
+    "gnoll_melee": {
+      "prefix": "gnoll_melee",
+      "body": [
+        "gnoll_melee"
+      ],
+      "description": ""
+    },
+    "gnoll_ranger": {
+      "prefix": "gnoll_ranger",
+      "body": [
+        "gnoll_ranger"
+      ],
+      "description": ""
+    },
+    "goblin_mage": {
+      "prefix": "goblin_mage",
+      "body": [
+        "goblin_mage"
+      ],
+      "description": ""
+    },
+    "goblin_melee": {
+      "prefix": "goblin_melee",
+      "body": [
+        "goblin_melee"
+      ],
+      "description": ""
+    },
+    "goblin_ranged": {
+      "prefix": "goblin_ranged",
+      "body": [
+        "goblin_ranged"
+      ],
+      "description": ""
+    },
+    "goblin_sapper": {
+      "prefix": "goblin_sapper",
+      "body": [
+        "goblin_sapper"
+      ],
+      "description": ""
+    },
+    "golem_adamantine": {
+      "prefix": "golem_adamantine",
+      "body": [
+        "golem_adamantine"
+      ],
+      "description": ""
+    },
+    "hag_green": {
+      "prefix": "hag_green",
+      "body": [
+        "hag_green"
+      ],
+      "description": ""
+    },
+    "harpy_melee": {
+      "prefix": "harpy_melee",
+      "body": [
+        "harpy_melee"
+      ],
+      "description": ""
+    },
+    "harpy_ranged": {
+      "prefix": "harpy_ranged",
+      "body": [
+        "harpy_ranged"
+      ],
+      "description": ""
+    },
+    "healer_melee": {
+      "prefix": "healer_melee",
+      "body": [
+        "healer_melee"
+      ],
+      "description": ""
+    },
+    "healer_ranged": {
+      "prefix": "healer_ranged",
+      "body": [
+        "healer_ranged"
+      ],
+      "description": ""
+    },
+    "hookhorror": {
+      "prefix": "hookhorror",
+      "body": [
+        "hookhorror"
+      ],
+      "description": ""
+    },
+    "imp_melee": {
+      "prefix": "imp_melee",
+      "body": [
+        "imp_melee"
+      ],
+      "description": ""
+    },
+    "imp_ranged": {
+      "prefix": "imp_ranged",
+      "body": [
+        "imp_ranged"
+      ],
+      "description": ""
+    },
+    "melee_ignoresurfacedamage": {
+      "prefix": "melee_ignoresurfacedamage",
+      "body": [
+        "melee_ignoresurfacedamage"
+      ],
+      "description": ""
+    },
+    "melee_large": {
+      "prefix": "melee_large",
+      "body": [
+        "melee_large"
+      ],
+      "description": ""
+    },
+    "melee_magic": {
+      "prefix": "melee_magic",
+      "body": [
+        "melee_magic"
+      ],
+      "description": ""
+    },
+    "melee_magic_smart": {
+      "prefix": "melee_magic_smart",
+      "body": [
+        "melee_magic_smart"
+      ],
+      "description": ""
+    },
+    "melee_stupid": {
+      "prefix": "melee_stupid",
+      "body": [
+        "melee_stupid"
+      ],
+      "description": ""
+    },
+    "merregon": {
+      "prefix": "merregon",
+      "body": [
+        "merregon"
+      ],
+      "description": ""
+    },
+    "mimic": {
+      "prefix": "mimic",
+      "body": [
+        "mimic"
+      ],
+      "description": ""
+    },
+    "mindflayer": {
+      "prefix": "mindflayer",
+      "body": [
+        "mindflayer"
+      ],
+      "description": ""
+    },
+    "minotaur": {
+      "prefix": "minotaur",
+      "body": [
+        "minotaur"
+      ],
+      "description": ""
+    },
+    "myconid_ranged": {
+      "prefix": "myconid_ranged",
+      "body": [
+        "myconid_ranged"
+      ],
+      "description": ""
+    },
+    "necromancer_melee": {
+      "prefix": "necromancer_melee",
+      "body": [
+        "necromancer_melee"
+      ],
+      "description": ""
+    },
+    "necromancer_ranged": {
+      "prefix": "necromancer_ranged",
+      "body": [
+        "necromancer_ranged"
+      ],
+      "description": ""
+    },
+    "ogre_melee": {
+      "prefix": "ogre_melee",
+      "body": [
+        "ogre_melee"
+      ],
+      "description": ""
+    },
+    "owlbear": {
+      "prefix": "owlbear",
+      "body": [
+        "owlbear"
+      ],
+      "description": ""
+    },
+    "ranged_ignoresurfacedamage": {
+      "prefix": "ranged_ignoresurfacedamage",
+      "body": [
+        "ranged_ignoresurfacedamage"
+      ],
+      "description": ""
+    },
+    "ranged_stupid": {
+      "prefix": "ranged_stupid",
+      "body": [
+        "ranged_stupid"
+      ],
+      "description": ""
+    },
+    "scryingeye": {
+      "prefix": "scryingeye",
+      "body": [
+        "scryingeye"
+      ],
+      "description": ""
+    },
+    "spider_phase": {
+      "prefix": "spider_phase",
+      "body": [
+        "spider_phase"
+      ],
+      "description": ""
+    }
+  ,
+  "ConditionSavingThrow": {
+    "prefix": "ConditionSavingThrow",
+    "body": [
+      "ConditionSavingThrow"
+    ],
+    "description": ""
+  },
+  "WeaponProperties": {
+    "prefix": "WeaponProperties",
+    "body": [
+      "WeaponProperties"
+    ],
+    "description": ""
+  },
   "SpellCast": {
     "prefix": "SpellCast",
     "body": [
@@ -8599,6 +9021,20 @@
     "prefix": "Never",
     "body": [
       "Never"
+    ],
+    "description": ""
+  },
+  "Cast2": {
+    "prefix": "Cast2",
+    "body": [
+      "Cast2"
+    ],
+    "description": ""
+  },
+  "D8Cantrip": {
+    "prefix": "D8Cantrip",
+    "body": [
+      "D8Cantrip"
     ],
     "description": ""
   },
@@ -8949,6 +9385,13 @@
     "prefix": "Warpicks",
     "body": [
       "Warpicks"
+    ],
+    "description": ""
+  },
+  "SourceDialogue": {
+    "prefix": "SourceDialogue",
+    "body": [
+      "SourceDialogue"
     ],
     "description": ""
   },
