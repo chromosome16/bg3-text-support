@@ -31,7 +31,7 @@
 					},
 					{
 					"name": "keyword",
-					"match": "(?!(?:using|entry|treasuretable|subtable|category|equipment|initialweaponset)\\b)\\b\\w+\\s+(\")([^\"]+)(\")\\s?",
+					"match": "(?!(?:using|itemgroup|namegroup|entry|treasuretable|subtable|category|equipment|initialweaponset|spellset)\\b)\\b\\w+\\s+(\")([^\"]+)(\")\\s?",
 					"captures": {
 						"1": {
 						"name": "keyword.operator"
@@ -92,6 +92,9 @@
 					},{
 						"name": "keyword.control",
 						"match": "\\badd equipment\\b"
+					},{
+						"name": "keyword.levelgroup",
+						"match": "\\blevelgroup\\b"
 					},
 					{
 						"name": "keyword.add",
@@ -119,7 +122,19 @@
 					},
 					{
 						"name": "keyword.control",
+						"match": "\\bitemgroup\\b"
+					},
+					{
+						"name": "keyword.control",
+						"match": "\\bspellset\\b"
+					},
+					{
+						"name": "keyword.control",
 						"match": "\\busing\\b"
+					},
+					{
+						"name": "keyword.namegroup",
+						"match": "\\bnamegroup\\b"
 					},
 					{
 						"name": "keyword.control",
@@ -159,6 +174,10 @@
 					},
 					{
 						"name": "support.class",
+						"match": "\\bTeleportation\\b"
+					},
+					{
+						"name": "support.class",
 						"match": "\\bRed\\b"
 					},
 					{
@@ -183,11 +202,23 @@
 					},
 					{
 						"name": "support.class",
+						"match": "\\bSquare\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCone\\b"
+					},
+					{
+						"name": "support.class",
 						"match": "\\bGreen\\b"
 					},
 					{
 						"name": "support.class",
 						"match": "\\bPoisonGreen\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bZone\\b"
 					},
 					{
 						"name": "support.class",
@@ -689,6 +720,14 @@
 					{
 						"name": "support.class",
 						"match": "\\bWaterCloudElectrified\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bD8Cantrip\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCast2\\b"
 					},
 					{
 						"name": "support.class",
@@ -2347,6 +2386,10 @@
 					},
 					{
 						"name": "support.class",
+						"match": "\\bSourceDialogue\\b"
+					},
+					{
+						"name": "support.class",
 						"match": "\\bHasVerbalComponent\\b"
 					},
 					{
@@ -2360,6 +2403,10 @@
 					{
 						"name": "support.class",
 						"match": "\\bIsAttack\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bPermanent\\b"
 					},
 					{
 						"name": "support.class",
@@ -2536,6 +2583,10 @@
 					{
 						"name": "support.class",
 						"match": "\\bUntilLongRest\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bResistanceType\\b"
 					},
 					{
 						"name": "support.class",
@@ -3132,6 +3183,34 @@
 					},
 					{
 						"name": "support.class",
+						"match": "\\bMostPowerful\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConditionSavingThrow\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConditionRollType\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bNonlethalCapped\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bConcentration\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\ShadowSpellSlot\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bWeaponProperties\\b"
+					},
+					{
+						"name": "support.class",
 						"match": "\\bDisableImmunityOverhead\\b"
 					},
 					{
@@ -3141,6 +3220,178 @@
 					{
 						"name": "support.class",
 						"match": "\\bToggle\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bact1_GOB_gut\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bact1_wyll\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bact2_TWN_nurse\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bbase\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bbeast\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bbeast_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bbeholder\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bbulette\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bcinematic_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgnoll_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgnoll_ranger\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgoblin_mage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgoblin_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgoblin_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgoblin_sapper\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bgolem_adamantine\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bhag_green\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bharpy_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bharpy_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bhealer_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bhealer_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bhookhorror\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bimp_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bimp_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_ignoresurfacedamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_large\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_magic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_magic_smart\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmelee_stupid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmerregon\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmimic\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmindflayer\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bminotaur\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bmyconid_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bnecromancer_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bnecromancer_ranged\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bogre_melee\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bowlbear\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\branged_ignoresurfacedamage\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\branged_stupid\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bscryingeye\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bspider_phase\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bspider_phase\\b"
 					},
 					{
 						"name": "support.class",
@@ -3925,6 +4176,38 @@
 					{
 						"name": "support.class",
 						"match": "\\bDaggers\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bHitDice\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bRitualPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLayOnHandsCharge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInterrupt_HellishRebukeTiefling_Charge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bInterrupt_HellishRebukeWarlockMI_Charge\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bLuckPoint\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bCause\\b"
+					},
+					{
+						"name": "support.class",
+						"match": "\\bFungalInfestationCharge\\b"
 					},
 					{
 						"name": "support.class",
@@ -5248,8 +5531,6 @@
 						"name": "support.class",
 						"match": "\\bWildMagicBarbarian\\b"
 					}
-					
-					
 				]
 		}	
 	},
